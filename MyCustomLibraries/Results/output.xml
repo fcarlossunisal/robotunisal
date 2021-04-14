@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot schemaversion="2" generator="Robot 4.0 (Python 3.5.0 on win32)" generated="20210326 01:06:29.859" rpa="false">
+<suite id="s1" source="C:\Users\Francisco\Documents\ROBOT\UNISAL\MyCustomLibraries\myLibrary.robot" name="myLibrary">
+<test id="s1-t1" name="Teste de conversão de string para HASH sha256">
+<kw name="Converter &quot;Estou ficando muito f#$%@ em Robot Framework!!&quot; para sha256" sourcename="Converter &quot;${CONTEUDO}&quot; para sha256">
+<kw library="geradorHash" name="Gerar Hash">
+<var>${CONTEUDO_HASH}</var>
+<arg>${CONTEUDO}</arg>
+<msg timestamp="20210326 01:06:30.777" level="INFO">Conteúdo: Estou ficando muito f#$%@ em Robot Framework!!
+Hash gerado: 5fee1873ad4cee43fff0837c40a80b935d220c31454856148cacddecbfb60dd8</msg>
+<msg timestamp="20210326 01:06:30.779" level="INFO">${CONTEUDO_HASH} = 5fee1873ad4cee43fff0837c40a80b935d220c31454856148cacddecbfb60dd8</msg>
+<status status="PASS" endtime="20210326 01:06:30.781" starttime="20210326 01:06:30.769"/>
+</kw>
+<kw library="BuiltIn" name="Log">
+<arg>${CONTEUDO_HASH}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210326 01:06:30.789" level="INFO">5fee1873ad4cee43fff0837c40a80b935d220c31454856148cacddecbfb60dd8</msg>
+<status status="PASS" endtime="20210326 01:06:30.790" starttime="20210326 01:06:30.784"/>
+</kw>
+<status status="PASS" endtime="20210326 01:06:30.795" starttime="20210326 01:06:30.758"/>
+</kw>
+<kw name="Close Browser" type="TEARDOWN">
+<msg timestamp="20210326 01:06:30.871" level="FAIL">No keyword with name 'Close Browser' found.</msg>
+<status status="FAIL" endtime="20210326 01:06:30.872" starttime="20210326 01:06:30.870">No keyword with name 'Close Browser' found.</status>
+</kw>
+<status status="FAIL" endtime="20210326 01:06:30.875" starttime="20210326 01:06:30.748">Teardown failed:
+No keyword with name 'Close Browser' found.</status>
+</test>
+<test id="s1-t2" name="Teste de conversão de arquivo para HASH sha256">
+<kw name="Converter o arquivo &quot;arquivo_PDF.pdf&quot; para sha256" sourcename="Converter o arquivo &quot;${FILE}&quot; para sha256">
+<kw library="geradorHash" name="Gerar Hash Arquivo">
+<var>${CONTEUDO_HASH}</var>
+<arg>./${FILE}</arg>
+<msg timestamp="20210326 01:06:30.912" level="INFO">Arquivo: ./arquivo_PDF.pdf
+Hash gerado: d9021489da6cd18be2f0954475524f1c2d37628e127a1e23ee9941e133dcbc7f</msg>
+<msg timestamp="20210326 01:06:30.914" level="INFO">${CONTEUDO_HASH} = d9021489da6cd18be2f0954475524f1c2d37628e127a1e23ee9941e133dcbc7f</msg>
+<status status="PASS" endtime="20210326 01:06:30.914" starttime="20210326 01:06:30.905"/>
+</kw>
+<kw library="BuiltIn" name="Log">
+<arg>${CONTEUDO_HASH}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210326 01:06:30.920" level="INFO">d9021489da6cd18be2f0954475524f1c2d37628e127a1e23ee9941e133dcbc7f</msg>
+<status status="PASS" endtime="20210326 01:06:30.921" starttime="20210326 01:06:30.916"/>
+</kw>
+<status status="PASS" endtime="20210326 01:06:30.923" starttime="20210326 01:06:30.900"/>
+</kw>
+<kw name="Close Browser" type="TEARDOWN">
+<msg timestamp="20210326 01:06:30.999" level="FAIL">No keyword with name 'Close Browser' found.</msg>
+<status status="FAIL" endtime="20210326 01:06:31.000" starttime="20210326 01:06:30.998">No keyword with name 'Close Browser' found.</status>
+</kw>
+<status status="FAIL" endtime="20210326 01:06:31.011" starttime="20210326 01:06:30.892">Teardown failed:
+No keyword with name 'Close Browser' found.</status>
+</test>
+<test id="s1-t3" name="Teste minha SeleniumLibrary">
+<kw name="Abrir meu browser">
+<kw name="My Open Browser">
+<arg>http://www.robotframework.org</arg>
+<arg>chrome</arg>
+<msg timestamp="20210326 01:06:31.110" level="FAIL">No keyword with name 'My Open Browser' found.</msg>
+<status status="FAIL" endtime="20210326 01:06:31.113" starttime="20210326 01:06:31.109"/>
+</kw>
+<status status="FAIL" endtime="20210326 01:06:31.116" starttime="20210326 01:06:31.028"/>
+</kw>
+<kw name="Close Browser" type="TEARDOWN">
+<msg timestamp="20210326 01:06:31.167" level="FAIL">No keyword with name 'Close Browser' found.</msg>
+<status status="FAIL" endtime="20210326 01:06:31.168" starttime="20210326 01:06:31.166">No keyword with name 'Close Browser' found.</status>
+</kw>
+<status status="FAIL" endtime="20210326 01:06:31.171" starttime="20210326 01:06:31.020">No keyword with name 'My Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close Browser' found.</status>
+</test>
+<test id="s1-t4" name="Teste Lista">
+<kw name="List Test">
+<kw library="OperatingSystem" name="Get File">
+<var>${FILECONTENT}</var>
+<arg>sample.txt</arg>
+<doc>Returns the contents of a specified file.</doc>
+<msg html="true" timestamp="20210326 01:06:31.205" level="INFO">Getting file '&lt;a href="file://C:\Users\Francisco\Documents\ROBOT\UNISAL\MyCustomLibraries\sample.txt"&gt;C:\Users\Francisco\Documents\ROBOT\UNISAL\MyCustomLibraries\sample.txt&lt;/a&gt;'.</msg>
+<msg timestamp="20210326 01:06:31.209" level="INFO">${FILECONTENT} = [["Sanjay", "Bangalore", "100"], ["Akshay", "Pune", "101"], ["Pranay", "Delhi", "102"]]</msg>
+<status status="PASS" endtime="20210326 01:06:31.210" starttime="20210326 01:06:31.201"/>
+</kw>
+<kw library="List" name="Convert To List From String">
+<var>@{list}</var>
+<arg>${FILECONTENT}</arg>
+<msg timestamp="20210326 01:06:31.217" level="INFO">@{list} = [ ['Sanjay', 'Bangalore', '100'] | ['Akshay', 'Pune', '101'] | ['Pranay', 'Delhi', '102'] ]</msg>
+<status status="PASS" endtime="20210326 01:06:31.218" starttime="20210326 01:06:31.212"/>
+</kw>
+<kw library="BuiltIn" name="Log To Console">
+<arg>${EMPTY}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" endtime="20210326 01:06:31.260" starttime="20210326 01:06:31.220"/>
+</kw>
+<kw name=": FOR">
+<arg>${ELEMENT}</arg>
+<arg>IN</arg>
+<arg>@{list}</arg>
+<msg timestamp="20210326 01:06:31.263" level="FAIL">Support for the old for loop syntax has been removed. Replace ': FOR' with 'FOR', end the loop with 'END', and remove escaping backslashes.</msg>
+<status status="FAIL" endtime="20210326 01:06:31.264" starttime="20210326 01:06:31.262"/>
+</kw>
+<kw name="\">
+<arg>${NAME}</arg>
+<arg>Set Variable</arg>
+<arg>${ELEMENT[0]}</arg>
+<status status="NOT RUN" endtime="20210326 01:06:31.267" starttime="20210326 01:06:31.266"/>
+</kw>
+<kw name="\">
+<arg>${CITY}</arg>
+<arg>Set Variable</arg>
+<arg>${ELEMENT[1]}</arg>
+<status status="NOT RUN" endtime="20210326 01:06:31.269" starttime="20210326 01:06:31.268"/>
+</kw>
+<kw name="\">
+<arg>${ID}</arg>
+<arg>Set Variable</arg>
+<arg>${ELEMENT[2]}</arg>
+<status status="NOT RUN" endtime="20210326 01:06:31.273" starttime="20210326 01:06:31.271"/>
+</kw>
+<kw name="\">
+<arg>Log to console</arg>
+<arg>Name=${NAME}, City=${CITY}, Id=${ID}</arg>
+<status status="NOT RUN" endtime="20210326 01:06:31.276" starttime="20210326 01:06:31.275"/>
+</kw>
+<status status="FAIL" endtime="20210326 01:06:31.278" starttime="20210326 01:06:31.196"/>
+</kw>
+<status status="FAIL" endtime="20210326 01:06:31.285" starttime="20210326 01:06:31.183">Support for the old for loop syntax has been removed. Replace ': FOR' with 'FOR', end the loop with 'END', and remove escaping backslashes.</status>
+</test>
+<status status="FAIL" endtime="20210326 01:06:31.301" starttime="20210326 01:06:29.875"/>
+</suite>
+<statistics>
+<total>
+<stat skip="0" fail="4" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat id="s1" name="myLibrary" skip="0" fail="4" pass="0">myLibrary</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20210326 01:06:30.315" level="ERROR">Error in file 'C:\Users\Francisco\Documents\ROBOT\UNISAL\MyCustomLibraries\myLibrary.robot' on line 3: Importing library 'Libraries.SeleniumLibrary' failed: ImportError: No module named 'Libraries'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\Francisco\AppData\Local\Programs\Python\Python35-32\Scripts\robot.exe
+  c:\users\francisco\appdata\local\programs\python\python35-32\python35.zip
+  c:\users\francisco\appdata\local\programs\python\python35-32\DLLs
+  c:\users\francisco\appdata\local\programs\python\python35-32\lib
+  c:\users\francisco\appdata\local\programs\python\python35-32
+  c:\users\francisco\appdata\local\programs\python\python35-32\lib\site-packages</msg>
+</errors>
+</robot>

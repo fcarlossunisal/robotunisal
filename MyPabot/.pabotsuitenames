@@ -1,0 +1,6 @@
+datasources:d5281ea130bc43414b2ad649281ebd19b2f9bb84
+commandlineoptions:9d51432a323f29d3591bff104fb69eb1b9c12a26
+suitesfrom:no-suites-from-option
+file:1444b1337a624ef8166eadb7d460c8698e00131f
+--suite Test.Test Acquire Lock1
+--suite Test.Test Acquire Lock2

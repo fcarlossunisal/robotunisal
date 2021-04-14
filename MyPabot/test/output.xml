@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.8.1 on darwin)" generated="20201125 17:55:09.691" rpa="false">
+<suite id="s1" name="Test Wait For 3S" source="/Users/fcarlossbr.ibm.com/PycharmProjects/UNISAL/MyPabot/test/test_wait_for_3s.robot">
+<test id="s1-t1" name="Wait For 3s">
+<kw name="Run And Return Rc And Output" library="OperatingSystem">
+<doc>Runs the given command in the system and returns the RC and output.</doc>
+<arguments>
+<arg>${APPLICATION}</arg>
+<arg>wait_for_3s</arg>
+</arguments>
+<assign>
+<var>${rc}</var>
+<var>${output}</var>
+</assign>
+<msg timestamp="20201125 17:55:09.726" level="FAIL">Keyword 'OperatingSystem.Run And Return Rc And Output' expected 1 argument, got 2.</msg>
+<status status="FAIL" starttime="20201125 17:55:09.726" endtime="20201125 17:55:09.726"></status>
+</kw>
+<doc>Just call the function wait_for_3s</doc>
+<tags>
+<tag>basic</tag>
+</tags>
+<status status="FAIL" starttime="20201125 17:55:09.725" endtime="20201125 17:55:09.726" critical="yes">Keyword 'OperatingSystem.Run And Return Rc And Output' expected 1 argument, got 2.</status>
+</test>
+<doc>Test the function wait_for_3s of the wait.py Python script</doc>
+<status status="FAIL" starttime="20201125 17:55:09.694" endtime="20201125 17:55:09.726"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1">basic</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="Test Wait For 3S">Test Wait For 3S</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

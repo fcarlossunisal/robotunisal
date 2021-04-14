@@ -1,0 +1,16 @@
+==============================================================================
+Test                                                                          
+==============================================================================
+Test.Test Acquire Lock1 :: Test the function wait_for_3s of the wait.py Pyt...
+==============================================================================
+Wait For 3s :: Just call the function wait_for_3s                     | PASS |
+------------------------------------------------------------------------------
+Test.Test Acquire Lock1 :: Test the function wait_for_3s of the wa... | PASS |
+1 critical test, 1 passed, 0 failed
+1 test total, 1 passed, 0 failed
+==============================================================================
+Test                                                                  | PASS |
+1 critical test, 1 passed, 0 failed
+1 test total, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/fcarlossbr.ibm.com/PycharmProjects/UNISAL/MyPabot/pabot_results/0/output.xml

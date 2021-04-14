@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.8.1 on darwin)" generated="20201213 11:02:51.504" rpa="false">
+<suite id="s1" name="Date Time" source="/Users/fcarlossbr.ibm.com/PycharmProjects/UNISAL/DateTime/date_time.robot">
+<test id="s1-t1" name="Exemplo 02: Manipulando o tempo">
+<kw name="Trabalhando com tempo">
+<kw name="Convert Time" library="DateTime">
+<doc>Converts between supported `time formats`.</doc>
+<arguments>
+<arg>1 minute 30 seconds</arg>
+</arguments>
+<assign>
+<var>${HORA}</var>
+</assign>
+<msg timestamp="20201213 11:02:51.541" level="INFO">${HORA} = 90.0</msg>
+<status status="PASS" starttime="20201213 11:02:51.540" endtime="20201213 11:02:51.541"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>São ${HORA} segundos em 1 minuto e 30 segundos!</arg>
+</arguments>
+<msg timestamp="20201213 11:02:51.541" level="INFO">São 90.0 segundos em 1 minuto e 30 segundos!</msg>
+<status status="PASS" starttime="20201213 11:02:51.541" endtime="20201213 11:02:51.542"></status>
+</kw>
+<kw name="Convert Time" library="DateTime">
+<doc>Converts between supported `time formats`.</doc>
+<arguments>
+<arg>5400</arg>
+<arg>verbose</arg>
+</arguments>
+<assign>
+<var>${HORA}</var>
+</assign>
+<msg timestamp="20201213 11:02:51.543" level="INFO">${HORA} = 1 hour 30 minutes</msg>
+<status status="PASS" starttime="20201213 11:02:51.542" endtime="20201213 11:02:51.543"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>5400 segundos é ${HORA}!</arg>
+</arguments>
+<msg timestamp="20201213 11:02:51.543" level="INFO">5400 segundos é 1 hour 30 minutes!</msg>
+<status status="PASS" starttime="20201213 11:02:51.543" endtime="20201213 11:02:51.543"></status>
+</kw>
+<kw name="Convert Time" library="DateTime">
+<doc>Converts between supported `time formats`.</doc>
+<arguments>
+<arg>5500</arg>
+<arg>timer</arg>
+<arg>exclude_millis=yes</arg>
+</arguments>
+<assign>
+<var>${HORA}</var>
+</assign>
+<msg timestamp="20201213 11:02:51.544" level="INFO">${HORA} = 01:31:40</msg>
+<status status="PASS" starttime="20201213 11:02:51.543" endtime="20201213 11:02:51.544"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>5500 segundos é ${HORA}!</arg>
+</arguments>
+<msg timestamp="20201213 11:02:51.544" level="INFO">5500 segundos é 01:31:40!</msg>
+<status status="PASS" starttime="20201213 11:02:51.544" endtime="20201213 11:02:51.545"></status>
+</kw>
+<status status="PASS" starttime="20201213 11:02:51.540" endtime="20201213 11:02:51.546"></status>
+</kw>
+<status status="PASS" starttime="20201213 11:02:51.539" endtime="20201213 11:02:51.546" critical="yes"></status>
+</test>
+<doc>http://robotframework.org/robotframework/latest/libraries/DateTime.html</doc>
+<status status="PASS" starttime="20201213 11:02:51.505" endtime="20201213 11:02:51.546"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Date Time">Date Time</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

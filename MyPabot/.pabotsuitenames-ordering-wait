@@ -1,0 +1,4 @@
+--suite Test.Test Wait For 10S
+#WAIT
+--suite Test.Test Wait For 3S
+--suite Test.Test Wait For 5S

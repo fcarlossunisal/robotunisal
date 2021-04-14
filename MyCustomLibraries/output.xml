@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.8.1 on darwin)" generated="20200923 19:43:44.306" rpa="false">
+<suite id="s1" name="myLibrary" source="/Users/fcarlossbr.ibm.com/PycharmProjects/UNISAL/MyCustomLibraries/myLibrary.robot">
+<test id="s1-t1" name="Teste de conversão de string para HASH sha256">
+<kw name="Converter &quot;Estou ficando muito f#$%@ em Robot Framework!!&quot; para sha256">
+<kw name="Gerar Hash" library="geradorHash">
+<arguments>
+<arg>${CONTEUDO}</arg>
+</arguments>
+<assign>
+<var>${CONTEUDO_HASH}</var>
+</assign>
+<msg timestamp="20200923 19:43:45.280" level="INFO">Conteúdo: Estou ficando muito f#$%@ em Robot Framework!!
+Hash gerado: 5fee1873ad4cee43fff0837c40a80b935d220c31454856148cacddecbfb60dd8</msg>
+<msg timestamp="20200923 19:43:45.280" level="INFO">${CONTEUDO_HASH} = 5fee1873ad4cee43fff0837c40a80b935d220c31454856148cacddecbfb60dd8</msg>
+<status status="PASS" starttime="20200923 19:43:45.279" endtime="20200923 19:43:45.280"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${CONTEUDO_HASH}</arg>
+</arguments>
+<msg timestamp="20200923 19:43:45.281" level="INFO">5fee1873ad4cee43fff0837c40a80b935d220c31454856148cacddecbfb60dd8</msg>
+<status status="PASS" starttime="20200923 19:43:45.281" endtime="20200923 19:43:45.281"></status>
+</kw>
+<status status="PASS" starttime="20200923 19:43:45.273" endtime="20200923 19:43:45.282"></status>
+</kw>
+<kw name="Close Browser" library="Libraries.SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200923 19:43:45.282" endtime="20200923 19:43:45.283"></status>
+</kw>
+<status status="PASS" starttime="20200923 19:43:45.264" endtime="20200923 19:43:45.283" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Teste de conversão de arquivo para HASH sha256">
+<kw name="Converter o arquivo &quot;arquivo_PDF.pdf&quot; para sha256">
+<kw name="Gerar Hash Arquivo" library="geradorHash">
+<arguments>
+<arg>./${FILE}</arg>
+</arguments>
+<assign>
+<var>${CONTEUDO_HASH}</var>
+</assign>
+<msg timestamp="20200923 19:43:45.292" level="INFO">Arquivo: ./arquivo_PDF.pdf
+Hash gerado: d9021489da6cd18be2f0954475524f1c2d37628e127a1e23ee9941e133dcbc7f</msg>
+<msg timestamp="20200923 19:43:45.292" level="INFO">${CONTEUDO_HASH} = d9021489da6cd18be2f0954475524f1c2d37628e127a1e23ee9941e133dcbc7f</msg>
+<status status="PASS" starttime="20200923 19:43:45.290" endtime="20200923 19:43:45.294"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${CONTEUDO_HASH}</arg>
+</arguments>
+<msg timestamp="20200923 19:43:45.294" level="INFO">d9021489da6cd18be2f0954475524f1c2d37628e127a1e23ee9941e133dcbc7f</msg>
+<status status="PASS" starttime="20200923 19:43:45.294" endtime="20200923 19:43:45.295"></status>
+</kw>
+<status status="PASS" starttime="20200923 19:43:45.289" endtime="20200923 19:43:45.295"></status>
+</kw>
+<kw name="Close Browser" library="Libraries.SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200923 19:43:45.295" endtime="20200923 19:43:45.296"></status>
+</kw>
+<status status="PASS" starttime="20200923 19:43:45.288" endtime="20200923 19:43:45.296" critical="yes"></status>
+</test>
+<test id="s1-t3" name="Teste minha SeleniumLibrary">
+<kw name="Abrir meu browser">
+<kw name="My Open Browser" library="Libraries.SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://www.robotframework.org</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20200923 19:43:45.305" level="INFO">Abrindo browser 'chrome' no site 'http://www.robotframework.org'.</msg>
+<status status="PASS" starttime="20200923 19:43:45.303" endtime="20200923 19:43:59.798"></status>
+</kw>
+<status status="PASS" starttime="20200923 19:43:45.298" endtime="20200923 19:43:59.799"></status>
+</kw>
+<kw name="Close Browser" library="Libraries.SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200923 19:43:59.799" endtime="20200923 19:44:00.103"></status>
+</kw>
+<status status="PASS" starttime="20200923 19:43:45.297" endtime="20200923 19:44:00.104" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200923 19:43:44.310" endtime="20200923 19:44:00.110"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0">Critical Tests</stat>
+<stat pass="3" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" id="s1" name="myLibrary">myLibrary</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
